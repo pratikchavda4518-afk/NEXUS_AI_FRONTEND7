@@ -1,57 +1,46 @@
 const API_URL =
-"http://127.0.0.1:8000";
+"https://nexus-ai-backend-sfmv.onrender.com";
 
 
-
+// SYSTEM STATUS
 export async function getSystemStatus(){
 
-    const response =
-    await fetch(
+    const response = await fetch(
         `${API_URL}/system`
     );
 
-
     return await response.json();
 
 }
 
 
-
+// MONITOR
 export async function getMonitor(){
 
-    const response =
-    await fetch(
+    const response = await fetch(
         `${API_URL}/monitor`
     );
 
-
     return await response.json();
 
 }
+
+
+// AI COMMAND
 export async function sendCommand(command){
 
-
-    const response =
-    await fetch(
+    const response = await fetch(
         `${API_URL}/command`,
         {
-
-            method:"POST",
+            method: "POST",
 
             headers:{
-
-                "Content-Type":
-                "application/json"
-
+                "Content-Type":"application/json"
             },
 
-
-            body:JSON.stringify({
-
-                command
-
+            body: JSON.stringify({
+                command: command
             })
-
         }
     );
 
@@ -59,11 +48,54 @@ export async function sendCommand(command){
     return await response.json();
 
 }
+
+
+// MEMORY
 export async function getMemory(){
 
-    const response =
-    await fetch(
-        "http://127.0.0.1:8000/memory"
+    const response = await fetch(
+        `${API_URL}/memory`
+    );
+
+    return await response.json();
+
+}
+
+
+// AI INFO
+export async function getAIInfo(){
+
+    const response = await fetch(
+        `${API_URL}/ai-info`
+    );
+
+    return await response.json();
+
+}
+
+
+// UPDATE CONFIG
+export async function updateConfig(
+    name,
+    mode,
+    voice
+){
+
+    const response = await fetch(
+        `${API_URL}/config`,
+        {
+            method:"POST",
+
+            headers:{
+                "Content-Type":"application/json"
+            },
+
+            body:JSON.stringify({
+                name,
+                mode,
+                voice
+            })
+        }
     );
 
 
