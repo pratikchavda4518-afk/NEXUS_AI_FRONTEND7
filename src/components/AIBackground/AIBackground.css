@@ -1,0 +1,129 @@
+.ai-background{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:0;
+
+}
+
+
+
+.particle{
+
+    position:absolute;
+
+    width:4px;
+
+    height:4px;
+
+
+    background:#00ffff;
+
+
+    border-radius:50%;
+
+
+    box-shadow:
+
+    0 0 15px #00ffff;
+
+
+    animation:
+
+    float 12s infinite linear;
+
+
+    opacity:.7;
+
+}
+
+
+
+.particle:nth-child(1){
+
+    left:10%;
+    top:20%;
+}
+
+
+
+.particle:nth-child(2){
+
+    left:25%;
+    top:70%;
+}
+
+
+
+.particle:nth-child(3){
+
+    left:50%;
+    top:40%;
+}
+
+
+
+.particle:nth-child(4){
+
+    left:80%;
+    top:30%;
+}
+
+
+
+.particle:nth-child(5){
+
+    left:90%;
+    top:80%;
+}
+
+
+
+.particle:nth-child(6){
+
+    left:65%;
+    top:60%;
+}
+
+
+
+@keyframes float{
+
+
+    from{
+
+        transform:
+
+        translateY(0)
+        scale(1);
+
+    }
+
+
+    50%{
+
+        transform:
+
+        translateY(-120px)
+        scale(1.5);
+
+    }
+
+
+    to{
+
+        transform:
+
+        translateY(0)
+        scale(1);
+
+    }
+
+
+}

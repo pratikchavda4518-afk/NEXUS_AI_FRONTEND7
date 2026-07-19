@@ -1,0 +1,74 @@
+.ai-core{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    height:280px;
+
+}
+
+.ring{
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    border:4px solid #00e5ff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    animation:rotate 8s linear infinite;
+
+    box-shadow:
+    0 0 40px #00e5ff;
+
+}
+
+.inner{
+
+    width:150px;
+
+    height:150px;
+
+    border-radius:50%;
+
+    background:#06111f;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:42px;
+
+    font-weight:bold;
+
+    color:#00e5ff;
+
+}
+
+@keyframes rotate{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}

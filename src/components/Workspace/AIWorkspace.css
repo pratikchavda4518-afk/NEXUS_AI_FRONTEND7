@@ -1,0 +1,203 @@
+.ai-workspace{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:22px;
+
+}
+
+
+
+.ai-status{
+
+    color:#00ffff;
+
+    letter-spacing:3px;
+
+}
+
+
+
+.status-dot{
+
+    display:inline-block;
+
+    width:10px;
+
+    height:10px;
+
+    background:#00ff88;
+
+    border-radius:50%;
+
+    margin-right:10px;
+
+    box-shadow:
+    0 0 20px #00ff88;
+
+}
+
+
+
+
+.core-circle{
+
+    width:150px;
+
+    height:150px;
+
+    border-radius:50%;
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    color:#00ffff;
+
+    font-size:32px;
+
+    font-weight:bold;
+
+
+    border:2px solid #00ffff;
+
+
+    box-shadow:
+
+    0 0 45px rgba(0,255,255,.6);
+
+
+    animation:pulse 2s infinite;
+
+}
+
+
+
+@keyframes pulse{
+
+    50%{
+
+        transform:scale(1.08);
+
+    }
+
+}
+
+
+
+.system-info{
+
+    width:100%;
+
+    display:flex;
+
+    gap:12px;
+
+}
+
+
+
+.info-card{
+
+    flex:1;
+
+    padding:12px;
+
+    border-radius:12px;
+
+
+    background:
+
+    rgba(0,255,255,.08);
+
+
+    text-align:center;
+
+}
+
+
+
+.info-card span{
+
+    display:block;
+
+    font-size:12px;
+
+    color:#8aa;
+
+}
+
+
+
+.info-card strong{
+
+    color:#00ffff;
+
+}
+
+
+
+.ai-metrics{
+
+    width:100%;
+
+}
+
+
+
+.metric{
+
+    display:flex;
+
+    justify-content:space-between;
+
+
+    padding:12px;
+
+
+    margin:8px 0;
+
+
+    border-radius:12px;
+
+
+    background:
+
+    rgba(255,255,255,.05);
+
+}
+
+
+
+.metric strong{
+
+    color:#00ffff;
+
+}
+
+
+
+.ai-button{
+
+    padding:14px 35px;
+
+    border:none;
+
+    border-radius:30px;
+
+
+    background:#00e5ff;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+}

@@ -1,0 +1,89 @@
+.file-explorer{
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+
+.memory-status{
+
+    padding:15px;
+
+    border-radius:15px;
+
+    background:
+    rgba(0,255,255,.08);
+
+    color:#00ffff;
+
+    display:flex;
+
+    justify-content:space-between;
+
+}
+
+
+
+.memory-status span{
+
+    color:#00ff88;
+
+}
+
+
+
+.file-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+
+
+.file-item{
+
+    padding:12px;
+
+    border-radius:12px;
+
+    background:
+    rgba(255,255,255,.05);
+
+    color:#d9ffff;
+
+    transition:.3s;
+
+}
+
+
+
+.file-item:hover{
+
+    background:
+    rgba(0,255,255,.15);
+
+    transform:translateX(8px);
+
+}
+.file-item small{
+
+    display:block;
+
+    margin-top:8px;
+
+    color:#8fa;
+
+    font-size:12px;
+
+}

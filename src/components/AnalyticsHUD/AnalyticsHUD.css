@@ -1,0 +1,121 @@
+.analytics-hud{
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    gap:25px;
+
+}
+
+
+.hud-item{
+
+    background:
+    rgba(0,255,255,.05);
+
+    padding:15px;
+
+    border-radius:15px;
+
+}
+
+
+
+.hud-title{
+
+    color:#9fffff;
+
+    letter-spacing:2px;
+
+    margin-bottom:10px;
+
+    font-size:13px;
+
+}
+
+
+
+.bar{
+
+    height:12px;
+
+    background:
+    rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+
+
+.fill{
+
+    height:100%;
+
+    border-radius:20px;
+
+    animation:
+    load 2s ease;
+
+}
+
+
+
+.cpu{
+
+    width:72%;
+
+    background:#00e5ff;
+
+}
+
+
+
+.ai{
+
+    width:94%;
+
+    background:#00ff88;
+
+}
+
+
+
+.net{
+
+    width:88%;
+
+    background:#8a7dff;
+
+}
+
+
+
+.hud-item span{
+
+    display:block;
+
+    margin-top:8px;
+
+    color:white;
+
+}
+
+
+
+@keyframes load{
+
+    from{
+
+        width:0;
+
+    }
+
+}

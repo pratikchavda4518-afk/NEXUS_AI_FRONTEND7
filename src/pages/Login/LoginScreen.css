@@ -1,0 +1,804 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+/* =========================
+   LOGIN PAGE
+========================= */
+
+.login-page{
+
+    height:100vh;
+    overflow:hidden;
+    position:relative;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    radial-gradient(circle at top,#133b52 0%,#08111d 35%,#04070d 100%);
+
+}
+
+
+/* Moving AI particles */
+
+.login-page::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle,#00f7ff22 2px,transparent 2px);
+
+    background-size:70px 70px;
+
+    animation:moveStars 35s linear infinite;
+
+    opacity:.5;
+
+}
+
+
+@keyframes moveStars{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(-200px);
+    }
+
+}
+
+
+
+/* =========================
+   GLASS LOGIN CARD
+========================= */
+
+
+.login-card{
+
+    width:420px;
+
+    padding:45px;
+
+    border-radius:25px;
+
+
+    backdrop-filter:blur(25px);
+
+
+    background:
+    rgba(255,255,255,.05);
+
+
+    border:
+
+    1px solid rgba(0,247,255,.25);
+
+
+
+    box-shadow:
+
+    0 0 50px rgba(0,247,255,.15),
+
+    inset 0 0 30px rgba(255,255,255,.03);
+
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+
+    z-index:5;
+
+
+    animation:
+
+    cardFloat 6s ease-in-out infinite;
+
+
+}
+
+
+
+/* Floating animation */
+
+@keyframes cardFloat{
+
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+
+}
+
+
+
+
+/* =========================
+   AI LOGO
+========================= */
+
+
+.ai-logo{
+
+    position:relative;
+
+    width:120px;
+
+    height:120px;
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    margin-bottom:35px;
+
+}
+
+
+
+.ring{
+
+    position:absolute;
+
+    border:
+
+    2px solid #00f7ff;
+
+
+    border-radius:50%;
+
+
+    box-shadow:
+
+    0 0 20px cyan;
+
+}
+
+
+
+.ring1{
+
+    width:120px;
+
+    height:120px;
+
+
+    animation:
+
+    rotateClock 8s linear infinite;
+
+}
+
+
+
+.ring2{
+
+    width:90px;
+
+    height:90px;
+
+
+    animation:
+
+    rotateAnti 5s linear infinite;
+
+}
+
+
+
+.core{
+
+    width:28px;
+
+    height:28px;
+
+
+    border-radius:50%;
+
+
+    background:#00f7ff;
+
+
+    box-shadow:
+
+    0 0 15px cyan,
+
+    0 0 45px cyan,
+
+    0 0 80px cyan;
+
+
+
+    animation:
+
+    corePulse 2s infinite;
+
+}
+
+
+
+
+
+@keyframes rotateClock{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+
+@keyframes rotateAnti{
+
+    from{
+
+        transform:rotate(360deg);
+
+    }
+
+    to{
+
+        transform:rotate(0deg);
+
+    }
+
+}
+
+
+
+@keyframes corePulse{
+
+
+    0%{
+
+        transform:scale(.8);
+
+    }
+
+
+    50%{
+
+        transform:scale(1.3);
+
+    }
+
+
+    100%{
+
+        transform:scale(.8);
+
+    }
+
+
+}
+
+
+
+
+/* =========================
+   TEXT
+========================= */
+
+
+.login-card h1{
+
+    font-size:52px;
+
+    white-space:nowrap;
+
+    letter-spacing:4px;
+
+    color:white;
+
+    text-shadow:
+        0 0 10px #00f7ff,
+        0 0 25px #00f7ff,
+        0 0 50px rgba(0,247,255,.6);
+
+    margin-bottom:12px;
+
+}
+
+
+
+.login-card p{
+
+
+    color:#99dfff;
+
+
+    margin-bottom:35px;
+
+
+}
+
+
+
+/* =========================
+   INPUTS
+========================= */
+
+
+.login-card input{
+
+
+    width:100%;
+
+
+    padding:16px;
+
+
+    margin-bottom:18px;
+
+
+    border:none;
+
+
+    outline:none;
+
+
+    border-radius:12px;
+
+
+    background:
+
+    rgba(255,255,255,.07);
+
+
+
+    color:white;
+
+
+    font-size:16px;
+
+
+}
+
+
+
+.login-card input::placeholder{
+
+
+    color:#8db6c7;
+
+
+}
+
+
+
+
+/* =========================
+   BUTTON
+========================= */
+
+
+.login-card button{
+
+
+    width:100%;
+
+
+    padding:16px;
+
+
+    border:none;
+
+
+    border-radius:12px;
+
+
+
+    background:#00d9ff;
+
+
+    color:black;
+
+
+
+    font-weight:bold;
+
+
+    font-size:16px;
+
+
+
+    cursor:pointer;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.login-card button:hover{
+
+
+    transform:translateY(-3px);
+
+
+    box-shadow:
+
+    0 0 30px cyan;
+
+
+}
+
+
+
+
+/* =========================
+   AURORA LIGHTS
+========================= */
+
+
+.aurora{
+
+
+    position:absolute;
+
+
+    border-radius:50%;
+
+
+    filter:blur(120px);
+
+
+    opacity:.45;
+
+
+
+    animation:
+
+    float 12s ease-in-out infinite;
+
+
+}
+
+
+
+.aurora1{
+
+
+    width:420px;
+
+    height:420px;
+
+
+    background:#00f7ff;
+
+
+    top:-120px;
+
+    left:-120px;
+
+
+}
+
+
+
+.aurora2{
+
+
+    width:520px;
+
+    height:520px;
+
+
+    background:#0066ff;
+
+
+
+    bottom:-180px;
+
+
+    right:-120px;
+
+
+
+    animation-delay:2s;
+
+
+}
+
+
+
+.aurora3{
+
+
+    width:350px;
+
+    height:350px;
+
+
+    background:#00ffd5;
+
+
+    top:45%;
+
+
+    left:55%;
+
+
+
+    animation-delay:5s;
+
+
+}
+
+
+
+
+@keyframes float{
+
+
+    0%{
+
+        transform:
+
+        translate(0,0)
+
+        scale(1);
+
+    }
+
+
+
+    50%{
+
+        transform:
+
+        translate(60px,-50px)
+
+        scale(1.15);
+
+    }
+
+
+
+    100%{
+
+        transform:
+
+        translate(0,0)
+
+        scale(1);
+
+    }
+
+
+}
+/* =========================
+   FUTURISTIC AI INPUTS
+========================= */
+
+
+.ai-input{
+
+    width:100%;
+
+    height:55px;
+
+    position:relative;
+
+    margin-bottom:20px;
+
+    display:flex;
+
+    align-items:center;
+
+
+    background:
+
+    rgba(255,255,255,.06);
+
+
+    border-radius:14px;
+
+
+    overflow:hidden;
+
+
+    border:1px solid rgba(0,247,255,.15);
+
+
+    transition:.4s;
+
+}
+
+
+
+.ai-input::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    left:-100%;
+
+
+    width:100%;
+
+
+    height:2px;
+
+
+    background:#00f7ff;
+
+
+    box-shadow:
+
+    0 0 15px cyan;
+
+
+    animation:scanInput 3s linear infinite;
+
+
+}
+
+
+
+@keyframes scanInput{
+
+
+    0%{
+
+        left:-100%;
+
+    }
+
+
+    100%{
+
+        left:100%;
+
+    }
+
+
+}
+
+
+
+.ai-input:hover{
+
+
+    border-color:#00f7ff;
+
+
+    box-shadow:
+
+    0 0 20px rgba(0,247,255,.5);
+
+
+}
+
+
+
+.ai-input:focus-within{
+
+
+    border-color:#00f7ff;
+
+
+    box-shadow:
+
+    0 0 30px rgba(0,247,255,.7);
+
+
+    transform:translateY(-2px);
+
+}
+
+
+
+
+.input-icon{
+
+
+    width:50px;
+
+
+    text-align:center;
+
+
+    font-size:20px;
+
+
+    color:#00f7ff;
+
+
+}
+
+
+
+.ai-input input{
+
+
+    flex:1;
+
+
+    height:100%;
+
+
+    margin:0;
+
+
+    background:transparent;
+
+
+    border:none;
+
+
+    padding:15px;
+
+
+    color:white;
+
+
+    outline:none;
+
+
+    font-size:16px;
+
+
+}
+
+
+
+.ai-input input::placeholder{
+
+
+    color:#9bc6d8;
+
+
+}

@@ -1,0 +1,293 @@
+.ai-core-page {
+    min-height: 100vh;
+    width: calc(100% - 260px);
+    box-sizing: border-box;
+    padding: 35px;
+    margin-left: 260px;
+    color: white;
+    overflow-y: auto;
+}
+
+
+/* GRID */
+
+.ai-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+}
+
+
+/* AI CARDS */
+
+.ai-card {
+
+    position: relative;
+
+    height: 220px;
+
+    padding: 25px;
+
+    box-sizing: border-box;
+
+    background:
+    rgba(15,25,45,.65);
+
+    backdrop-filter: blur(20px);
+
+    border:
+    1px solid rgba(0,255,255,.25);
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    transition:.4s;
+
+}
+
+
+.ai-card:hover {
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 0 35px rgba(0,255,255,.35);
+
+}
+
+
+/* CARD GLOW */
+
+.glow {
+
+    position:absolute;
+
+    width:120px;
+
+    height:120px;
+
+    background:#00ffff;
+
+    filter:blur(80px);
+
+    opacity:.3;
+
+}
+
+
+/* TEXT */
+
+.ai-card h2 {
+
+    color:#b7c7d9;
+
+    font-size:18px;
+
+}
+
+
+.ai-value {
+
+    font-size:45px;
+
+    font-weight:700;
+
+    margin:20px 0;
+
+    color:#00ffff;
+
+}
+
+
+.ai-status {
+
+    color:#00ff99;
+
+    font-weight:bold;
+
+}
+
+
+/* OPERATIONS PANEL */
+
+.core-panel {
+
+    margin-top:35px;
+
+    padding:30px;
+
+    background:
+    rgba(10,20,35,.75);
+
+    border-radius:25px;
+
+    border:
+    1px solid rgba(0,255,255,.2);
+
+}
+
+
+/* OPERATIONS */
+
+.operation {
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+
+.operation label {
+
+    display:block;
+
+    margin-bottom:8px;
+
+    color:#9bb0c5;
+
+}
+
+
+
+/* PROGRESS */
+
+.bar {
+
+    width:100%;
+
+    height:12px;
+
+    background:#162536;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+
+.bar span {
+
+    display:block;
+
+    height:100%;
+
+    background:
+    linear-gradient(
+        90deg,
+        cyan,
+        #0077ff
+    );
+
+    box-shadow:
+    0 0 20px cyan;
+
+}
+
+
+
+/* TERMINAL */
+
+.terminal-box {
+
+    margin-top:35px;
+
+    padding:25px;
+
+    min-height:160px;
+
+    background:
+    rgba(0,0,0,.55);
+
+    border-radius:20px;
+
+    border:
+    1px solid rgba(0,255,255,.25);
+
+    font-family:
+    "Courier New",
+    monospace;
+
+}
+
+
+.terminal-box h3 {
+
+    color:#00ffff;
+
+}
+
+
+.terminal-box p {
+
+    color:#00ff99;
+
+    animation:
+    blink 1.5s infinite;
+
+}
+
+
+
+@keyframes blink {
+
+    50% {
+
+        opacity:.5;
+
+    }
+
+}
+
+
+
+/* RESPONSIVE */
+
+@media(max-width:1200px){
+
+    .ai-grid {
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+}
+
+
+
+@media(max-width:700px){
+
+    .ai-core-page {
+
+        width:100%;
+
+        margin-left:0;
+
+        padding:20px;
+
+    }
+
+
+    .ai-grid {
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .ai-value {
+
+        font-size:35px;
+
+    }
+
+}

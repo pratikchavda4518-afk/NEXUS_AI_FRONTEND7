@@ -1,0 +1,149 @@
+.system-terminal{
+
+    height:320px;
+
+    background:#071018;
+
+    border-radius:20px;
+
+    border:1px solid rgba(0,255,255,.15);
+
+    overflow:hidden;
+
+    display:flex;
+
+    flex-direction:column;
+
+    box-shadow:0 0 25px rgba(0,255,255,.12);
+
+}
+
+.terminal-header{
+
+    height:55px;
+
+    background:#0d1725;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 20px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.terminal-buttons{
+
+    display:flex;
+
+    gap:8px;
+
+}
+
+.terminal-buttons span{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+}
+
+.red{
+
+    background:#ff5f56;
+
+}
+
+.yellow{
+
+    background:#ffbd2e;
+
+}
+
+.green{
+
+    background:#27c93f;
+
+}
+
+.terminal-header h3{
+
+    color:#7fefff;
+
+    letter-spacing:2px;
+
+    font-size:14px;
+
+}
+
+.terminal-body{
+
+    flex:1;
+
+    padding:18px;
+
+    overflow-y:auto;
+
+    font-family:Consolas, monospace;
+
+    color:#00ff99;
+
+}
+
+.terminal-body p{
+
+    margin-bottom:12px;
+
+    animation:fadeUp .4s ease;
+
+}
+
+.prompt{
+
+    color:#00ffff;
+
+}
+
+.cursor{
+
+    animation:blink 1s infinite;
+
+    color:#00ff99;
+
+}
+
+@keyframes blink{
+
+    50%{
+
+        opacity:0;
+
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(10px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
